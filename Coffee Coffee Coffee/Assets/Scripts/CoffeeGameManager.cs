@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class CoffeeGameManager : MonoBehaviour
 {
 
-    public GameObject player;
-
     public float Coffee_temprature = 10;
     public float Coffee_beans = 10;
 
@@ -25,7 +23,6 @@ public class CoffeeGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame

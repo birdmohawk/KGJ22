@@ -8,23 +8,12 @@ public class SceneController : MonoBehaviour
 
 
 
-    void Start()
-    {
-    }
-
-    public void loadLevelMenu()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-
     public void loadLevelOne()
     {
 
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
 
         SceneManager.UnloadSceneAsync(1);
-        SceneManager.UnloadSceneAsync(4);
 
     }
 
@@ -49,6 +38,14 @@ public class SceneController : MonoBehaviour
 
         SceneManager.UnloadSceneAsync(4);
         SceneManager.UnloadSceneAsync(2);
+
     }
 
-}
+        public void loadLevelFive()
+        {
+            SceneManager.LoadSceneAsync(6, LoadSceneMode.Additive);
+
+            SceneManager.UnloadSceneAsync(5);
+        }
+
+    }

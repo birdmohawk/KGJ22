@@ -467,7 +467,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7768053, y: 1}
+    m_SensorSize: {x: 1.7787234, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1332,7 +1332,7 @@ MonoBehaviour:
   player: {fileID: 0}
   Coffee_temprature: 10
   Coffee_beans: 10
-  Coffee_size: 0
+  Coffee_size: 2
   Temp_Fill: {fileID: 1079615911}
   Size_Icon: {fileID: 1360169709}
   Bean_Fill: {fileID: 1764720921}

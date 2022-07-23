@@ -19,32 +19,32 @@ public class PlayerStats : MonoBehaviour
     }
 
 
-    void loseTemp()
+    public void loseTemp()
     {
         cgm.Coffee_temprature -= 1;
     }
 
-    void gainTemp()
+    public void gainTemp()
     {
         cgm.Coffee_temprature += 1;
     }
 
-    void loseBeans()
-    {
-        cgm.Coffee_beans += 1;
-    }
-    
-    void gainBeans()
+    public void loseBeans()
     {
         cgm.Coffee_beans += 1;
     }
 
-    void loseSize()
+    public void gainBeans()
+    {
+        cgm.Coffee_beans += 1;
+    }
+
+    public void loseSize()
     {
         cgm.Coffee_size += 1;
     }
 
-    void gainSize()
+    public void gainSize()
     {
         cgm.Coffee_size -= 1;
     }

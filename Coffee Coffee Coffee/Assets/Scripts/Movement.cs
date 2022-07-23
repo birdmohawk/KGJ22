@@ -8,11 +8,14 @@ public class Movement : MonoBehaviour
     public float jumpPower = 1f;
     Rigidbody2D rb;
 
+    PlayerStats ps;
+
     public bool isGrounded = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        ps = GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -36,6 +39,7 @@ public class Movement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 rb.AddForce(Vector3.up * jumpPower * 10);
+                ps.loseSize();
             }
         }
     }
