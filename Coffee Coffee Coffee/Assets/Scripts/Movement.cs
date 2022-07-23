@@ -13,7 +13,6 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Instantiate(rb, transform);
     }
 
     // Update is called once per frame
@@ -42,10 +41,6 @@ public class Movement : MonoBehaviour
     }
 
 
-    public void FlipCharacter()
-    {
-        transform.localScale = -transform.localScale;
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
