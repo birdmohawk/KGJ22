@@ -1311,7 +1311,7 @@ GameObject:
   - component: {fileID: 1816028076}
   - component: {fileID: 1816028075}
   m_Layer: 0
-  m_Name: 'CoffeeGameManager '
+  m_Name: CoffeeGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,7 +1329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a662059b825d88c46bb952bcbb40bead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   Coffee_temprature: 10
   Coffee_beans: 10
   Coffee_size: 2

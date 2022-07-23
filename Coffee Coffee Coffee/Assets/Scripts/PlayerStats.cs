@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
 
-    CoffeeGameManager cgm;
+    public CoffeeGameManager cgm;
 
     public float Coffee_temprature = 10;
     public float Coffee_beans = 10;
@@ -14,8 +14,6 @@ public class PlayerStats : MonoBehaviour
     private void Start()
     {
         cgm = GameObject.Find("CoffeeGameManager").GetComponent<CoffeeGameManager>();
-
-        cgm.player = gameObject;
     }
 
 

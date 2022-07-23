@@ -50,7 +50,6 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
-            Debug.Log("Hit Ground");
             isGrounded = true;
         }
     }
@@ -59,7 +58,6 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Debug.Log("Leave Ground");
             isGrounded = false;
         }
     }
