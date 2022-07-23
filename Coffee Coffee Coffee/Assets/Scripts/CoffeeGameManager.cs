@@ -35,6 +35,7 @@ public class CoffeeGameManager : MonoBehaviour
         Bean_Fill.fillAmount = Coffee_beans * .1f;
         Size_Icon.transform.position = new Vector3(Size_Icon.transform.position.x, Coffee_size - 4.5f, Size_Icon.transform.position.z);
 
-
     }
+
+
 }
