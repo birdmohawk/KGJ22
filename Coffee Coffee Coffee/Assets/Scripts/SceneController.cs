@@ -10,7 +10,6 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
-        loadLevelMenu();
     }
 
     public void loadLevelMenu()
@@ -22,27 +21,26 @@ public class SceneController : MonoBehaviour
     public void loadLevelOne()
     {
 
-        SceneManager.LoadScene(1);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
 
-        SceneManager.UnloadSceneAsync(3);
-        SceneManager.LoadScene(4);
+        SceneManager.UnloadSceneAsync(1);
+        SceneManager.UnloadSceneAsync(4);
 
     }
 
     public void loadLevelTwo()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
 
         SceneManager.UnloadSceneAsync(2);
-        SceneManager.LoadScene(4);
+        SceneManager.UnloadSceneAsync(4);
     }
     public void loadLevelThree()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
 
         SceneManager.UnloadSceneAsync(3);
-        SceneManager.LoadScene(2);
+        SceneManager.UnloadSceneAsync(2);
     }
 
 

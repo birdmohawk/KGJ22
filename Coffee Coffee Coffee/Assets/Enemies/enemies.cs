@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemies : MonoBehaviour
 {
     float timer;
-    float waitingTime =1;
+    public float waitingTime =1;
     public GameObject bullet;
 
     // Start is called before the first frame update
