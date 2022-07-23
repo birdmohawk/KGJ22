@@ -9,7 +9,9 @@ public class PlayerStats : MonoBehaviour
 
     public float Coffee_temprature = 10;
     public float Coffee_beans = 10;
-    public float Coffee_size = 10;
+
+    [Range(0, 2)]
+    public float Coffee_size = 0;
 
     private void Start()
     {
@@ -39,12 +41,18 @@ public class PlayerStats : MonoBehaviour
 
     public void loseSize()
     {
-        cgm.Coffee_size += 1;
+        if(cgm.Coffee_size > 20)
+        {
+            cgm.Coffee_size -= 20;
+        }
     }
 
     public void gainSize()
     {
-        cgm.Coffee_size -= 1;
+        if (cgm.Coffee_size < 120)
+        {
+            cgm.Coffee_size -= 20;
+        }
     }
 
 
