@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Instantiate(rb, transform);
     }
 
     // Update is called once per frame
