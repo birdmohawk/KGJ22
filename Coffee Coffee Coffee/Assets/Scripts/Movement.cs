@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float movement = Input.GetAxisRaw("Horizontal");
+            float movement = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
 
         if(movement < 0)
@@ -59,5 +59,4 @@ public class Movement : MonoBehaviour
             isGrounded = false;
         }
     }
-
-}
+}   
