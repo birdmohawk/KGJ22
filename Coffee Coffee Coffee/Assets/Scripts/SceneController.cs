@@ -43,5 +43,12 @@ public class SceneController : MonoBehaviour
         SceneManager.UnloadSceneAsync(2);
     }
 
+    public void loadLevelFour()
+    {
+        SceneManager.LoadSceneAsync(5, LoadSceneMode.Additive);
+
+        SceneManager.UnloadSceneAsync(4);
+        SceneManager.UnloadSceneAsync(2);
+    }
 
 }

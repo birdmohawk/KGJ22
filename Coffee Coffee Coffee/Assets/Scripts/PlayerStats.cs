@@ -14,9 +14,6 @@ public class PlayerStats : MonoBehaviour
     private void Start()
     {
         cgm = GameObject.Find("CoffeeGameManager").GetComponent<CoffeeGameManager>();
-        Coffee_temprature = cgm.Coffee_temprature;
-        Coffee_beans = cgm.Coffee_beans;
-        Coffee_size = cgm.Coffee_size;
 
         cgm.player = gameObject;
     }
@@ -29,9 +26,28 @@ public class PlayerStats : MonoBehaviour
 
     void gainTemp()
     {
-        cgm.Coffee_temprature -= 1;
+        cgm.Coffee_temprature += 1;
     }
 
+    void loseBeans()
+    {
+        cgm.Coffee_beans += 1;
+    }
+    
+    void gainBeans()
+    {
+        cgm.Coffee_beans += 1;
+    }
+
+    void loseSize()
+    {
+        cgm.Coffee_size += 1;
+    }
+
+    void gainSize()
+    {
+        cgm.Coffee_size -= 1;
+    }
 
 
 
