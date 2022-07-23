@@ -21,6 +21,16 @@ public class Movement : MonoBehaviour
         float movement = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
 
+        if(movement < 0)
+        {
+            transform.localScale = new Vector3(-1,1,1);
+        }
+
+        if (movement > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
         if (isGrounded)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -28,6 +38,12 @@ public class Movement : MonoBehaviour
                 rb.AddForce(Vector3.up * jumpPower * 10);
             }
         }
+    }
+
+
+    public void FlipCharacter()
+    {
+        transform.localScale = -transform.localScale;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
