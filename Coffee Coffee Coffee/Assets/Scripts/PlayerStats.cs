@@ -51,7 +51,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (cgm.Coffee_size < 120)
         {
-            cgm.Coffee_size -= 20;
+            cgm.Coffee_size += 20;
         }
     }
 
