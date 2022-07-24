@@ -17,7 +17,7 @@ public class GainMilk : MonoBehaviour
             PlayerStats ps = player.GetComponent<PlayerStats>();
 
             ps.gainSize();
-            ps.loseBeans();
+            ps.loseMilk();
         }
     }
 }
