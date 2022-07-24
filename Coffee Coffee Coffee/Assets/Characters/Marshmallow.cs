@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class Marshmallow : MonoBehaviour
 {
     public float jump = 100;
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player")
         {

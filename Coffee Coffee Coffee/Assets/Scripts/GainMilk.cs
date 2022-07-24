@@ -16,8 +16,21 @@ public class GainMilk : MonoBehaviour
 
             PlayerStats ps = player.GetComponent<PlayerStats>();
 
+
             ps.gainSize();
             ps.loseMilk();
+
+            StartCoroutine(destroySoon());
+
+
         }
+    }
+
+    IEnumerator destroySoon()
+    {
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<ParticleSystem>().Emit(10);
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }
