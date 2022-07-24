@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level0_Root.unity
-    guid: 35fdaef3ffa247441bfcc12bb68c4495
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/0_MainMenu.unity
     guid: 5f0d553eb669ba34392085f741f7ec65
+  - enabled: 1
+    path: Assets/Scenes/1-Movement.unity
+    guid: 5fffc55235cf3cb4aab0db34f5098288
+  - enabled: 1
+    path: Assets/Scenes/2-SizeMatters.unity
+    guid: 8067de0dd79059e459bbfd9a063603ab
+  - enabled: 1
+    path: Assets/Scenes/2-SizeMatters_Milk.unity
+    guid: a27753936abb88644b5ad32a98fdadc6
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: c08e881e5304b3b48a74a00a0b48b349
@@ -20,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: b88ccc7475e2e674dae6098dff799de7
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 50e2bec3e2c60fe40ac5ce432f83f641
   - enabled: 1
     path: Assets/Scenes/Level5.unity
     guid: 5f9a5dc4b9493e14796ca5fef527b6b5
@@ -38,7 +47,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level10.unity
     guid: a0a17b66568588041a9231ddf70725be
-  - enabled: 1
-    path: Assets/Scenes/MainGameScene.unity
-    guid: a050b1b2924728644b51d2fceccf8aea
   m_configObjects: {}

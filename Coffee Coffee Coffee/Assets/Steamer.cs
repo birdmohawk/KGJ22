@@ -20,7 +20,7 @@ public class Steamer : MonoBehaviour
         {
             steamTick += Time.deltaTime;
 
-            if(steamTick > 1)
+            if(steamTick > .25)
             {
                 ps.gainTemp();
                 steamTick = 0f;

@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     ParticleSystem particles;
 
     public bool isGrounded = false;
+    public bool jumpEnabled = true;
 
     void Start()
     {
@@ -27,12 +28,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            float movement = Input.GetAxisRaw("Horizontal");
+        float movement = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
 
-        if(movement < 0)
+
+        if (movement < 0)
         {
-            transform.localScale = new Vector3(-1,1,1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
         if (movement > 0)
@@ -40,22 +42,26 @@ public class Movement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         }
 
-        if (isGrounded)
+        if (jumpEnabled)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (isGrounded)
             {
-                rb.AddForce(Vector3.up * jumpPower * 10);
-                particles.Emit(10);
-                ps.loseSize();
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    rb.AddForce(Vector3.up * jumpPower * 10);
+                    particles.Emit(10);
+                    ps.loseSize();
+                }
             }
         }
+
     }
 
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
         }
@@ -92,4 +98,4 @@ public class Movement : MonoBehaviour
 
 
     }
-}   
+}

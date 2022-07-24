@@ -6,91 +6,53 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
 
+    CoffeeGameManager cgm;
 
+    GameObject ui;
 
-    public void loadLevelOne()
+    private void Start()
     {
-
-        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
-
-        SceneManager.UnloadSceneAsync(1);
-
+        cgm = GameObject.Find("CoffeeGameManager").GetComponent<CoffeeGameManager>();
+        ui = GameObject.Find("UI");
     }
 
-    public void loadLevelTwo()
-    {
-        SceneManager.UnloadSceneAsync(3);
-        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
 
-        SceneManager.UnloadSceneAsync(2);
-    }
-    public void loadLevelThree()
+    public void LoadNextLevel()
     {
-        SceneManager.UnloadSceneAsync(4);
-        SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
 
-        SceneManager.UnloadSceneAsync(3);
-        SceneManager.UnloadSceneAsync(2);
+        SceneManager.LoadScene(currentScene + 1);
     }
 
-    public void loadLevelFour()
+    public void ReloadCurrentLevel()
     {
-        SceneManager.UnloadSceneAsync(5);
-        SceneManager.LoadSceneAsync(5, LoadSceneMode.Additive);
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
 
-        SceneManager.UnloadSceneAsync(4);
-        SceneManager.UnloadSceneAsync(2);
-
+        SceneManager.LoadScene(currentScene);
     }
 
-        public void loadLevelFive()
+    public void PassedLevel()
+    {
+        StartCoroutine(PassLevelCheck());
+
+        IEnumerator PassLevelCheck()
         {
-        SceneManager.UnloadSceneAsync(6);
 
-        SceneManager.LoadSceneAsync(6, LoadSceneMode.Additive);
+            if (cgm.levelPassed)
+            {
 
-            SceneManager.UnloadSceneAsync(5);
+                yield return new WaitForSeconds(2f);
+                ui.transform.GetChild(3).gameObject.SetActive(true);
+
+            }
+            else
+            {
+                yield return new WaitForSeconds(2f);
+                ui.transform.GetChild(4).gameObject.SetActive(true);
+            }
         }
-
-    public void loadLevelSix()
-    {
-        SceneManager.UnloadSceneAsync(7);
-        SceneManager.LoadSceneAsync(7, LoadSceneMode.Additive);
-
-        SceneManager.UnloadSceneAsync(6);
     }
 
-    public void loadLevelSeven()
-    {
-        SceneManager.UnloadSceneAsync(8);
-        SceneManager.LoadSceneAsync(8, LoadSceneMode.Additive);
-
-        SceneManager.UnloadSceneAsync(7);
-    }
-
-    public void loadLevelEight()
-    {
-        SceneManager.UnloadSceneAsync(9);
-        SceneManager.LoadSceneAsync(9, LoadSceneMode.Additive);
-
-        SceneManager.UnloadSceneAsync(8);
-    }
-
-    public void loadLevelNine()
-    {
-        SceneManager.UnloadSceneAsync(10);
-        SceneManager.LoadSceneAsync(10, LoadSceneMode.Additive);
-
-        SceneManager.UnloadSceneAsync(9);
-    }
-
-    public void loadLevelTen()
-    {
-        SceneManager.UnloadSceneAsync(11);
-        SceneManager.LoadSceneAsync(11, LoadSceneMode.Additive);
-
-        SceneManager.UnloadSceneAsync(10);
-    }
 
 
 

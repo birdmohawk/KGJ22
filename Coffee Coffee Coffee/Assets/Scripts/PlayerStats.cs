@@ -33,6 +33,8 @@ public class PlayerStats : MonoBehaviour
             tick = 0;
         }
     }
+
+
     public void loseTemp()
     {
         if(cgm.Coffee_temprature > 0)
@@ -59,7 +61,7 @@ public class PlayerStats : MonoBehaviour
 
     public void loseMilk()
     {
-        if(Coffee_milkiness > 0)
+        if(cgm.Coffee_milkiness > 0)
         {
             cgm.Coffee_milkiness -= 1;
 
@@ -72,7 +74,7 @@ public class PlayerStats : MonoBehaviour
 
     public void gainMilk()
     {
-        if (Coffee_milkiness < 10)
+        if (cgm.Coffee_milkiness < 10)
         {
             cgm.Coffee_milkiness += 1;
 

@@ -13,6 +13,7 @@ public class SpeechBubble : MonoBehaviour
         }
 
         transform.GetChild(Random.Range(0, transform.childCount)).gameObject.SetActive(true);
+        StartCoroutine(turnOff());
     }
 
 
