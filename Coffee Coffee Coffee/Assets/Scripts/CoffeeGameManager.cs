@@ -7,7 +7,7 @@ public class CoffeeGameManager : MonoBehaviour
 {
 
     public float Coffee_temprature = 10;
-    public float Coffee_beans = 10;
+    public float Coffee_milkiness = 10;
 
     [Range(20, 120)]
     public float Coffee_size = 70;
@@ -15,7 +15,7 @@ public class CoffeeGameManager : MonoBehaviour
 
     public Image Temp_Fill;
     public Image Size_Icon;
-    public Image Bean_Fill;
+    public Image Milk_Fill;
 
 
 
@@ -29,7 +29,7 @@ public class CoffeeGameManager : MonoBehaviour
     void Update()
     {
         Temp_Fill.fillAmount = Coffee_temprature * .1f;
-        Bean_Fill.fillAmount = Coffee_beans * .1f;
+        Milk_Fill.fillAmount = Coffee_milkiness * .1f;
         Size_Icon.transform.position = new Vector3(Size_Icon.transform.position.x, Coffee_size, 0);
 
     }
