@@ -153,11 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Coffee_temprature: 10
-  Coffee_beans: 10
+  Coffee_milkiness: 10
   Coffee_size: 0
   Temp_Fill: {fileID: 0}
   Size_Icon: {fileID: 0}
-  Bean_Fill: {fileID: 0}
+  Milk_Fill: {fileID: 0}
 --- !u!4 &158103754
 Transform:
   m_ObjectHideFlags: 0
@@ -4123,7 +4123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649225119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.1156, y: 4.41, z: 0.2}
+  m_LocalPosition: {x: 11.1156, y: 2.47, z: 0.2}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
