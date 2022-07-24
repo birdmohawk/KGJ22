@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
 
     PlayerStats ps;
 
+    ParticleSystem particles;
+
     public bool isGrounded = false;
 
     void Start()
@@ -18,6 +20,8 @@ public class Movement : MonoBehaviour
 
         StartCoroutine(delayStartTime());
         ps = GetComponent<PlayerStats>();
+
+        particles = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -41,6 +45,7 @@ public class Movement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 rb.AddForce(Vector3.up * jumpPower * 10);
+                particles.Emit(10);
                 ps.loseSize();
             }
         }
@@ -82,7 +87,6 @@ public class Movement : MonoBehaviour
             transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = true;
         }
 
-        isGrounded = true;
         rb.gravityScale = 2f;
 
 

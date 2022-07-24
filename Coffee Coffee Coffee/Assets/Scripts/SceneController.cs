@@ -22,7 +22,6 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
 
         SceneManager.UnloadSceneAsync(2);
-        SceneManager.UnloadSceneAsync(4);
     }
     public void loadLevelThree()
     {
@@ -48,4 +47,41 @@ public class SceneController : MonoBehaviour
             SceneManager.UnloadSceneAsync(5);
         }
 
+    public void loadLevelSix()
+    {
+        SceneManager.LoadSceneAsync(7, LoadSceneMode.Additive);
+
+        SceneManager.UnloadSceneAsync(6);
     }
+
+    public void loadLevelSeven()
+    {
+        SceneManager.LoadSceneAsync(8, LoadSceneMode.Additive);
+
+        SceneManager.UnloadSceneAsync(7);
+    }
+
+    public void loadLevelEight()
+    {
+        SceneManager.LoadSceneAsync(9, LoadSceneMode.Additive);
+
+        SceneManager.UnloadSceneAsync(8);
+    }
+
+    public void loadLevelNine()
+    {
+        SceneManager.LoadSceneAsync(10, LoadSceneMode.Additive);
+
+        SceneManager.UnloadSceneAsync(9);
+    }
+
+    public void loadLevelTen()
+    {
+        SceneManager.LoadSceneAsync(11, LoadSceneMode.Additive);
+
+        SceneManager.UnloadSceneAsync(10);
+    }
+
+
+
+}
