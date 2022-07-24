@@ -18,7 +18,7 @@ public class GainMilk : MonoBehaviour
 
 
             ps.gainSize();
-            ps.loseMilk();
+            ps.gainMilk();
 
             StartCoroutine(destroySoon());
 

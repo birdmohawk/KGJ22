@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        StartCoroutine(delayStartTime());
         ps = GetComponent<PlayerStats>();
     }
 
@@ -60,5 +62,30 @@ public class Movement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    IEnumerator delayStartTime()
+    {
+        isGrounded = false;
+        rb.gravityScale = 0f;
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
+        }
+
+        yield return new WaitForSeconds(6f);
+
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = true;
+        }
+
+        isGrounded = true;
+        rb.gravityScale = 2f;
+
+
+
     }
 }   
