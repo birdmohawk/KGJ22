@@ -16,12 +16,38 @@ public class SceneController : MonoBehaviour
         ui = GameObject.Find("UI");
     }
 
+    private void Update()
+    {
+
+        if (Input.GetKeyDown("r"))
+        {
+            ReloadCurrentLevel();
+        }
+
+        if (Input.GetKeyDown("n"))
+        {
+            LoadNextLevel();
+        }
+
+        if (Input.GetKeyDown("l"))
+        {
+            LoadPreviousLevel();
+        }
+    }
+
 
     public void LoadNextLevel()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene(currentScene + 1);
+    }
+
+    public void LoadPreviousLevel()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(currentScene - 1);
     }
 
     public void ReloadCurrentLevel()
@@ -54,6 +80,29 @@ public class SceneController : MonoBehaviour
     }
 
 
+    public void AppQuit()
+    {
+        Application.Quit();
+    }
+
+    public void LoadLastLevel()
+    {
+        StartCoroutine(LoadLast());
+    }
+
+    IEnumerator LoadLast()
+    {
+
+        transform.parent.GetComponent<BoxCollider2D>().enabled = false;
+        transform.parent.GetComponent<BoxCollider2D>().enabled = false;
+        transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(4);
+        transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(true);
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene(14);
+
+    }
 
 
 }

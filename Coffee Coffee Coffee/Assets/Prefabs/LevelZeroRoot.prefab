@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 91204073}
   - component: {fileID: 91204075}
   - component: {fileID: 91204074}
+  - component: {fileID: 609767274}
   m_Layer: 0
   m_Name: napkin_Bad
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &609767274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91204072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb5a8c87a779364da8712c14226579e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &480725653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1.3800049, y: -3.1600037}
+  m_AnchoredPosition: {x: 1.3800049, y: -3.1600342}
   m_SizeDelta: {x: -83.4028, y: -272.8891}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &763155804755408653
@@ -1516,7 +1529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.59002686, y: 0.040008545}
+  m_AnchoredPosition: {x: 0.59002686, y: 0.040039062}
   m_SizeDelta: {x: 34.4505, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &763155804765779607
@@ -1670,7 +1683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -2.380005, y: 1.1499939}
+  m_AnchoredPosition: {x: -2.380005, y: 1.1500244}
   m_SizeDelta: {x: -594.8839, y: -309.29}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &763155805337515684

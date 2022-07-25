@@ -7,20 +7,14 @@ public class PlayerStats : MonoBehaviour
 
     public CoffeeGameManager cgm;
 
-    public float Coffee_temprature = 10;
-    public float Coffee_milkiness = 10;
-
-    [Range(0, 2)]
-    public float Coffee_size = 0;
 
     float tick = 0;
 
     private void Start()
     {
         cgm = GameObject.Find("CoffeeGameManager").GetComponent<CoffeeGameManager>();
-        gainSize();
-        gainSize();
-        gainSize();
+
+        checkSize();
     }
 
     private void Update()
@@ -87,21 +81,40 @@ public class PlayerStats : MonoBehaviour
 
     public void loseSize()
     {
-        if(cgm.Coffee_size > 20)
+        if(cgm.Coffee_size > -32)
         {
             cgm.Coffee_size -= 20;
         }
         else
         {
-            cgm.Coffee_size = 20;
+            cgm.Coffee_size = -32;
         }
 
-        if(cgm.Coffee_size < 45)
+        if(cgm.Coffee_size < 15)
         {
             tallCup();
         }
 
-        if(cgm.Coffee_size > 70)
+        if(cgm.Coffee_size > 15)
+        {
+            grandeCup();
+        }
+
+        if (cgm.Coffee_size > 100)
+        {
+            ventriCup();
+        }
+    }
+
+
+    public void checkSize()
+    {
+        if (cgm.Coffee_size < 15)
+        {
+            tallCup();
+        }
+
+        if (cgm.Coffee_size > 15)
         {
             grandeCup();
         }
@@ -114,22 +127,22 @@ public class PlayerStats : MonoBehaviour
 
     public void gainSize()
     {
-        if (cgm.Coffee_size < 120)
+        if (cgm.Coffee_size < 144)
         {
             cgm.Coffee_size += 20;
         }
         else
         {
-            cgm.Coffee_size = 120;
+            cgm.Coffee_size = 144;
         }
 
 
-        if (cgm.Coffee_size < 45)
+        if (cgm.Coffee_size < 15)
         {
             tallCup();
         }
 
-        if (cgm.Coffee_size > 70)
+        if (cgm.Coffee_size > 15)
         {
             grandeCup();
         }

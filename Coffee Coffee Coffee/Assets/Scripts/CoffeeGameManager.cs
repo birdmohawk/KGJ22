@@ -15,7 +15,7 @@ public class CoffeeGameManager : MonoBehaviour
     public float Coffee_temprature = 10;
     public float Coffee_milkiness = 5;
 
-    [Range(20, 120)]
+    [Range(-32, 144)]
     public float Coffee_size = 70;
 
 
@@ -36,7 +36,7 @@ public class CoffeeGameManager : MonoBehaviour
     {
         Temp_Fill.fillAmount = Coffee_temprature * .1f;
         Milk_Fill.fillAmount = Coffee_milkiness * .1f;
-        Size_Icon.transform.position = new Vector3(Size_Icon.transform.position.x, Coffee_size, 0);
+        Size_Icon.rectTransform.anchoredPosition = new Vector2(Size_Icon.rectTransform.anchoredPosition.x, Coffee_size);
 
 
         if(Coffee_milkiness > 3 && Coffee_milkiness < 8)
@@ -48,7 +48,7 @@ public class CoffeeGameManager : MonoBehaviour
             goodMilk = false;
         }
 
-        if (Coffee_size > 70)
+        if (Coffee_size > 25)
         {
             goodSize = true;
         }

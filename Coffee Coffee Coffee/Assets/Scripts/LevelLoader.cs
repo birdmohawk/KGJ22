@@ -23,6 +23,8 @@ public class LevelLoader : MonoBehaviour
         {
             TriggerEvent.Invoke();
 
+            collision.transform.GetChild(3).gameObject.SetActive(true);
+
             this.enabled = false;
         }
     }

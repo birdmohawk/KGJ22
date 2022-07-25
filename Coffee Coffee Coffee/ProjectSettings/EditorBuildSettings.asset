@@ -12,39 +12,42 @@ EditorBuildSettings:
     path: Assets/Scenes/1-Movement.unity
     guid: 5fffc55235cf3cb4aab0db34f5098288
   - enabled: 1
+    path: Assets/Scenes/1-TooMilkey.unity
+    guid: 9516b0e36d7e8b04c8f714d47ef1cf0b
+  - enabled: 1
+    path: Assets/Scenes/1-JustRight.unity
+    guid: bc94f4b4ae9ea22488c88f8d61a25e5c
+  - enabled: 1
     path: Assets/Scenes/2-SizeMatters.unity
     guid: 8067de0dd79059e459bbfd9a063603ab
   - enabled: 1
     path: Assets/Scenes/2-SizeMatters_Milk.unity
     guid: a27753936abb88644b5ad32a98fdadc6
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/3 - Marshmellows.unity
+    guid: c8685bbf2ac039a4786fb75b6a38c44a
+  - enabled: 1
+    path: Assets/Scenes/4 - The gap.unity
+    guid: ed574cd2c2398714887eb42c4ba68acb
+  - enabled: 1
+    path: Assets/Scenes/5 - Enduldge.unity
     guid: c08e881e5304b3b48a74a00a0b48b349
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: 9e54e6e813f07dc44a45dda1b65168fe
+    path: Assets/Scenes/6 - Pink and White.unity
+    guid: 0b69c7dfec91ae043a2379ff1b5a4cc5
   - enabled: 1
-    path: Assets/Scenes/Level3.unity
-    guid: b88ccc7475e2e674dae6098dff799de7
+    path: Assets/Scenes/7 - Choose a path.unity
+    guid: 262c7902c07a5f741a9c23c8f06cdf30
   - enabled: 1
-    path: Assets/Scenes/Level4.unity
-    guid: 50e2bec3e2c60fe40ac5ce432f83f641
+    path: Assets/Scenes/8 - Pogostick.unity
+    guid: 71362180bd3cc2b419770637f94254e9
   - enabled: 1
-    path: Assets/Scenes/Level5.unity
-    guid: 5f9a5dc4b9493e14796ca5fef527b6b5
+    path: Assets/Scenes/9 - AllTogether.unity
+    guid: 14552f6ffcd07c8498caa79565b69381
   - enabled: 1
-    path: Assets/Scenes/Level6.unity
-    guid: 30772e76c5d1f4640b2663912bfe2b00
+    path: Assets/Scenes/10- The End.unity
+    guid: 52360af0fdc962249ac34202106e6269
   - enabled: 1
-    path: Assets/Scenes/Level7.unity
-    guid: 1eb6daf8f8b70e444b2e3fc113cc0dd7
-  - enabled: 1
-    path: Assets/Scenes/Level8.unity
-    guid: ad95cf431e3d9c242922488290802414
-  - enabled: 1
-    path: Assets/Scenes/Level9.unity
-    guid: b9e8fa5cb0ace4740ad33778790ab5c1
-  - enabled: 1
-    path: Assets/Scenes/Level10.unity
-    guid: a0a17b66568588041a9231ddf70725be
+    path: Assets/Scenes/11- End Screen.unity
+    guid: f73a49a6b67613341a7150f5c1fa5626
   m_configObjects: {}
